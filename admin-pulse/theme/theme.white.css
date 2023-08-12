@@ -1,0 +1,25 @@
+:root{
+	--text-color: #666;
+	--base-color: #fff;
+	--highlight-color: #ef1960;
+	--notification-color: var(--highlight-color);
+	--button-color: var(--highlight-color);
+	--button-text-color: #fff;
+
+	--menu-text: #666;
+	--menu-icon:  #999;
+
+	--menu-current-text: #fff;
+	--menu-current-icon: #fff;
+	--menu-current-background: var(--highlight-color);
+
+	--menu-highlight-text: #fff;
+	--menu-highlight-icon: #fff;
+	--menu-highlight-background: var(--highlight-color);
+
+	--menu-submenu-focus-text: #222;
+	--menu-submenu-background: #fff;
+	--menu-submenu-current-text: var(--highlight-color);
+
+	--menu-bubble-text: #fff;
+}

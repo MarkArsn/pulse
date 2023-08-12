@@ -1,0 +1,110 @@
+:root{
+	--theme-default: #666;
+	--theme-dark: #02b875;
+	--theme-white: #f1f1f1;
+
+	--menu-fold-width: 64px;
+	--menu-fold-height: 36px;
+	--menu-height: 30px;
+}
+
+#adminmenu .menu-top > a{
+	margin: 2px 12px 2px 12px;
+	padding: 0;
+	border-radius: 4px;
+}
+#adminmenu .menu-top .wp-menu-name,
+#adminmenu div.wp-menu-image:before{
+	padding: 0;
+}
+#adminmenu div.wp-menu-image{
+	height: auto !important;
+	width: 36px !important;
+}
+#adminmenu li.wp-has-current-submenu,
+#adminmenu li.menu-top:hover{
+	background-color: transparent !important;
+}
+a.wp-has-current-submenu:after{
+	display: none;
+}
+
+@media screen and (min-width: 783px) {
+	.admin-menu-h #adminmenu a.menu-top,
+	.admin-menu-h #adminmenu #collapse-button{
+		min-height: calc(var(--menu-h-height) - 12px) !important;
+	}
+	.admin-menu-h #adminmenu .menu-top .wp-menu-name{
+		padding: 0 2px;
+	}
+	.admin-menu-h #adminmenu .menu-top .wp-menu-image{
+		width: 24px !important;
+	}
+	.admin-menu-h #adminmenu .menu-top > a{
+		padding: 0px 6px;
+		margin:  6px 4px;
+	}
+	.admin-menu-h #collapse-menu{
+		margin: auto 0 !important;
+	}
+}
+
+
+/* bar logo */
+@media screen and (min-width: 783px) {
+	body:not(.admin-menu-h) #wp-admin-bar-site-name > a,
+	body:not(.admin-menu-h) #wp-admin-bar-site-name > a:hover{
+		width: calc( var(--menu-width) - 20px );
+		background-color: var(--menu-background) !important;
+	}
+	body:not(.admin-menu-h) #wp-admin-bar-site-name span{
+		color: var(--menu-text);
+	}
+	body:not(.admin-menu-h).folded #wp-admin-bar-site-name > a{
+		width: calc( var(--menu-fold-width) - 20px );
+		justify-content: center;
+	}
+	body:not(.admin-menu-h).folded #wp-admin-bar-site-name > a img + span{
+		display: none;
+	}
+}
+
+@media (min-width: 783px) and (max-width: 960px) {
+	body:not(.admin-menu-h).auto-fold #wp-admin-bar-site-name > a{
+		width: calc( var(--menu-fold-width) - 20px );
+		justify-content: center;
+	}
+	body:not(.admin-menu-h).auto-fold #wp-admin-bar-site-name > a img + span{
+		display: none;
+	}
+}
+
+/* login */
+@media (min-width: 783px){
+	body.login {
+	    display: flex;
+	    align-content: stretch;
+	}
+}
+
+#login,
+#login-form{
+	flex: 1;
+	padding: 40px 32px;
+	background-color: #fff;
+	box-shadow: 0 1px 3px rgb(0 0 0 / 3%);
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.login form .wp-pwd, 
+.login form .input{
+	border-radius: 0;
+	box-shadow: none;
+	border-bottom: 1px solid #eee;
+}
+#login-form .button-primary{
+	border-color: var(--theme-dark);
+	background-color: var(--theme-dark);
+}
